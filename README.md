@@ -2,6 +2,8 @@
 
 A complete end-to-end multi-agent system showcasing the integration of **Google ADK** (Agent Development Kit), **A2A** (Agent-to-Agent) protocol, and **MCP** (Model Context Protocol) for building a distributed sales forecasting system.
 
+![Multi-Agentic Sales Forecaster using ADK,CrewAI,MCP with A2A Communication](https://github.com/jchowdhary/sales_forecaster_project/blob/master/MultiAgenticA2AWithMCP.png)
+
 ## 🏗️ Architecture Overview
 
 This project demonstrates a **production-ready, modular architecture** where specialized agents collaborate via A2A protocol, with data provided through MCP servers.
