@@ -259,6 +259,114 @@ Give me the GDP trends and economic outlook for 2024
 Generate a comprehensive sales forecast report for 2025 including both political and economic analysis
 ```
 
+## 🧪 Detailed Test Prompts by Component
+
+Use these prompts to test individual components and the full orchestration workflow:
+
+### 1️⃣ Test Political Agent (Remote A2A)
+
+These prompts test the Political Analyst remote agent via A2A protocol:
+
+```
+What were the key political events in 2025 that could affect sales?
+```
+
+```
+Analyze political risks for 2026
+```
+
+```
+What high-impact political events should I watch for in 2024?
+```
+
+---
+
+### 2️⃣ Test GDP Agent (Remote A2A)
+
+These prompts test the GDP Analyst remote agent via A2A protocol:
+
+```
+What was the GDP outlook for 2025?
+```
+
+```
+Give me the quarterly GDP data for 2024
+```
+
+```
+What are the economic trends for 2026?
+```
+
+---
+
+### 3️⃣ Test Local Tools (generate_forecast_report)
+
+These prompts test the orchestrator's local report generation tool:
+
+```
+Generate a sales report for 2025 with the following:
+- Political analysis: High risk due to Presidential Inauguration and Tax Policy changes
+- Economic analysis: Moderate growth at 2.9% GDP with stable consumer spending
+```
+
+---
+
+### 4️⃣ Test Local Tools (compare_years)
+
+These prompts test the orchestrator's year comparison tool:
+
+```
+Compare the sales outlook between 2024 and 2025
+```
+
+```
+Which year was better for sales - 2025 or 2026? Compare them.
+```
+
+---
+
+### 5️⃣ Test Full Orchestration (Both Remote Agents + Local Tools)
+
+These prompts trigger the complete multi-agent workflow:
+
+```
+Create a comprehensive sales analysis for 2025
+```
+
+```
+I need a complete analysis for 2026 including political risks, economic outlook, and strategic recommendations
+```
+
+```
+What was the sales outlook for 2024? Get both political and economic analysis.
+```
+
+---
+
+### 6️⃣ Advanced Multi-Agent Workflow
+
+These prompts test complex orchestration across multiple agents:
+
+```
+Compare the business environment between 2024 and 2026. 
+Get political analysis and GDP data for both years, then provide a comparative report.
+```
+
+```
+I'm planning sales strategy for next year. Analyze 2025's political events, economic conditions, and give me a detailed report with recommendations.
+```
+
+### Expected Orchestration Flow
+
+When you ask: `"Create a comprehensive sales analysis for 2025"`
+
+The orchestrator should:
+1. 🔷 **Call Political Agent** → Get political events/risks for 2025
+2. 📈 **Call GDP Agent** → Get economic data for 2025
+3. 📋 **Call generate_forecast_report** → Combine into final report
+
+You should see delegation happening in the ADK Web UI!
+
 ## 🧪 Testing Individual Components
 
 ### Test MCP Server Tools
